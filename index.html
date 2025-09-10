@@ -4,12 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Finom banner</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="icon" href="assets/favicon-144x144.png" type="image/png" sizes="144x144">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="icon" href="assets/favicon.png" type="image/png" sizes="144x144">
 </head>
 <body>
     <main>
-        <div class="banner">
+        <article class="banner">
             <button class="banner__close" type="button" aria-label="Close">
                 <img src="assets/icons/icon-close.svg" alt="Close" class="banner__close-icon" />
             </button>
@@ -17,9 +18,8 @@
             <div class="banner__wrapper">
                 <p class="banner__text">
                     Expand your business with a flexible loan tailored to your needs. 
-                    Whether you're investing in new equipment, increasing inventory, or 
-                    boosting cash flow, we offer quick approvals and competitive rates 
-                    to keep your business growing.
+                    Whether you're investing in new equipment, increasing inventory, or boosting cash flow, 
+                    we offer quick approvals and competitive rates to keep your business growing.
                   </p>
               
                   <ul class="banner__list">
@@ -40,12 +40,14 @@
             
         
             <div class="banner__actions">
-              <a href="https://app.finom.co/en/signup" target="_blank" class="banner__button">
+              <a href="https://app.finom.co/signup" target="_blank" class="banner__button">
                 Apply Now
               </a>
-              <a href="https://finom.co" class="banner__link">More Information</a>
+              <a href="https://finom.co" target="_blank" class="banner__link">More Information</a>
             </div>
-          </div>
+
+            <div class="banner__decoration"></div>
+        </article>
     </main>
   <script src="script.js"></script>
 </body>

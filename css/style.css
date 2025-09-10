@@ -1,0 +1,249 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Regular.woff2') format('woff2'),
+       url('../assets/fonts/Poppins-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Medium.woff2') format('woff2'),
+       url('../assets/fonts/Poppins-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-SemiBold.woff2') format('woff2'),
+       url('../assets/fonts/Poppins-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --line-height-base: 1.5;
+  --line-clamp-lines: 10;
+
+  --color-bg-app: #F3F2F7;
+  --color-bg-content: #FFFFFF;
+  --color-text-default: #0B002E;
+  --color-text-light: #0B002EA3;
+  --color-border-default: #0B002E33;
+  --color-border-focus: #6666FF;
+  --color-btn-primary-bg: #FF4C5C;
+  --color-btn-neutral-bg: #0B002E0D;
+  --color-btn-primary: #FFFFFF;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+  
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 1rem;
+  line-height: var(--line-height-base);
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-bg-app);
+  overflow-y: auto;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.banner {
+  position: relative;
+  background: var(--color-bg-content);
+  border: 2px solid var(--color-border-focus);
+  border-radius: 12px;
+  padding: 2rem 2.75rem;
+  max-width: 700px;
+  overflow: hidden;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.banner:hover {
+  border-color: var(--color-border-default);
+}
+
+.banner__title {
+  max-width: 90%;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.75rem;
+
+  overflow-wrap: break-word;
+  /* fallback */
+  word-break: break-word;
+}
+
+.banner__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  line-height: 1;
+  border: 0;
+  border-radius: 40px;
+  background: var(--color-btn-neutral-bg);
+  cursor: pointer;
+}
+
+.banner__close-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.banner__wrapper {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.banner__wrapper > * {
+  margin: 0;
+  flex: 1;
+}
+
+.banner__text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--line-clamp-lines);
+  overflow: hidden;
+
+  /* fallback */
+  line-height: var(--line-height-base);
+  max-height: calc(var(--line-height-base) * var(--line-clamp-lines));
+}
+
+.banner__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+}
+
+.banner__list-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.banner__list-item:not(:first-child) {
+  margin-top: 0.75rem;
+}
+
+.banner__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.banner__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-top: 0.75rem;
+}
+
+.banner__button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  background-color: var(--color-btn-primary-bg);
+  color: var(--color-btn-primary);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.banner__link {
+  color: var(--color-text-light);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.banner__decoration {
+  position: absolute;
+  bottom: -2rem;
+  right: 0;
+  width: 300px;
+  height: 200px;
+  background: url("../assets/images/img-coins@2x.png") no-repeat center / contain;
+}
+
+.banner__close,
+.banner__button, 
+.banner__link {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.banner__close:hover,
+.banner__button:hover, 
+.banner__link:hover {
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    padding: 1.25rem;
+  }
+
+  .banner {
+    padding: 1.25rem;
+  }
+
+  .banner__title {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: var(--line-height-base)rem;
+  }
+
+  .banner__close {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .banner__close-icon {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+
+  .banner__wrapper {
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .banner__actions {
+    flex-direction: column;
+  }
+
+  .banner__button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .banner__decoration {
+    display: none;
+  }
+}
