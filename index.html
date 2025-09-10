@@ -10,11 +10,11 @@
 </head>
 <body>
     <main>
-        <article class="banner" data-target="banner">
+        <article class="banner" role="region" aria-labelledby="banner-title" data-target="banner">
             <button class="banner__close" type="button" aria-label="Close" data-target-action="close">
-                <img src="assets/icons/icon-close.svg" alt="Close" class="banner__close-icon" />
+                <img src="assets/icons/icon-close.svg" alt="" class="banner__close-icon" />
             </button>
-            <h2 class="banner__title">Get the Business Funding You Need</h2>
+            <h2 id="banner-title" class="banner__title">Get the Business Funding You Need</h2>
             <div class="banner__wrapper">
                 <p class="banner__text">
                     Expand your business with a flexible loan tailored to your needs. 
@@ -24,15 +24,15 @@
               
                   <ul class="banner__list">
                     <li class="banner__list-item">
-                        <img src="assets/icons/icon-check.svg" alt="" class="banner__icon">
+                        <img src="assets/icons/icon-check.svg" alt="" aria-hidden="true" class="banner__list-icon">
                         <span>Fast approval process</span>
                     </li>
                     <li class="banner__list-item">
-                        <img src="assets/icons/icon-check.svg" alt="" class="banner__icon">
+                        <img src="assets/icons/icon-check.svg" alt="" aria-hidden="true" class="banner__list-icon">
                         <span>Flexible repayment terms</span>
                     </li>
                     <li class="banner__list-item">
-                        <img src="assets/icons/icon-check.svg" alt="" class="banner__icon">
+                        <img src="assets/icons/icon-check.svg" alt="" aria-hidden="true" class="banner__list-icon">
                         <span>Competitive interest rates</span>
                     </li>
                   </ul>
@@ -40,13 +40,13 @@
             
         
             <div class="banner__actions">
-              <a href="https://app.finom.co/signup" target="_blank" class="banner__button">
+              <a href="https://app.finom.co/signup" target="_blank" rel="noopener noreferrer" class="banner__button">
                 Apply Now
               </a>
-              <a href="https://finom.co" target="_blank" class="banner__link">More Information</a>
+              <a href="https://finom.co" target="_blank" rel="noopener noreferrer" class="banner__link">More Information</a>
             </div>
 
-            <div class="banner__decoration"></div>
+            <div class="banner__decoration" aria-hidden="true"></div>
         </article>
     </main>
   <script src="script.js"></script>
